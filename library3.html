@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Membership Form</title>
+</head>
+<body>
+
+<h2 align="center">Library Membership Form</h2>
+
+<form action="library3.php" method="post">
+
+<table border="1" cellpadding="5" align="center">
+
+<tr>
+    <td><label>Member ID</label></td>
+    <td><input type="text" name="memberid"></td>
+</tr>
+
+<tr>
+    <td><label>Full Name</label></td>
+    <td><input type="text" name="fullname"></td>
+</tr>
+
+<tr>
+    <td><label>Email</label></td>
+    <td><input type="email" name="email"></td>
+</tr>
+
+<tr>
+    <td><label>Phone Number</label></td>
+    <td><input type="text" name="phone"></td>
+</tr>
+
+<tr>
+    <td><label>Address</label></td>
+    <td>
+        <textarea name="address" rows="4" cols="25"></textarea>
+    </td>
+</tr>
+
+<tr>
+    <td><label>Membership Type</label></td>
+    <td>
+        <select name="membership">
+            <option>Student</option>
+            <option>Faculty</option>
+            <option>General</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td><label>Gender</label></td>
+    <td>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+    </td>
+</tr>
+
+<tr>
+    <td><label>Preferred Books</label></td>
+    <td>
+        <input type="checkbox" name="books[]" value="Science">Science
+        <input type="checkbox" name="books[]" value="History">History
+        <input type="checkbox" name="books[]" value="Fiction">Fiction
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
