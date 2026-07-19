@@ -1,4 +1,16 @@
 <?php
+if (
+    empty($_POST["memberid"]) ||
+    empty($_POST["fullname"]) ||
+    empty($_POST["email"]) ||
+    empty($_POST["phone"]) ||
+    empty($_POST["address"]) ||
+    empty($_POST["gender"])
+) {
+    echo "<h2>Library Membership Registration Failed!</h2>";
+    echo "Please fill all the required fields.";
+    exit();
+}
 
 $memberid = $_POST["memberid"];
 $fullname = $_POST["fullname"];
