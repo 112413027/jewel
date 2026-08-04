@@ -6,13 +6,13 @@
     <style>
         body{
             font-family: Arial;
-            background:#f2f2f2;
+            background:white;
         }
 
         .box{
-            width:400px;
+            width:500px;
             margin:80px auto;
-            background:white;
+            background:soft gray;
             padding:20px;
             border-radius:5px;
             text-align:center;
@@ -44,16 +44,16 @@
 
 <h2>Mobile Number Directory</h2>
 
-<form action="internal1.php" method="post">
+<form action="int.php" method="post">
 
-<input type="text" name="mobile" placeholder="Enter 10-Digit Mobile Number"
+<input type="number" name="mobile" placeholder="Enter 10-Digit Mobile Number"
             maxlength="10"
             pattern="[0-9]{10}"
             inputmode="numeric"
             oninput="this.value=this.value.replace(/[^0-9]/g,'')"
-            required>>
+            required>
 
-<br>
+<br><br>
 
 <input type="submit" value="Search">
 
