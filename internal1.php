@@ -22,6 +22,6 @@ else
     echo "<p>Contact not found.</p>";
 }
 
-echo "<br><a href='index.html'>Back</a>";
+echo "<br><a href='internal1.html'>Back</a>";
 
 ?>
