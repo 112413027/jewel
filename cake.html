@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweet Crumbs Bakery</title>
+
+    <link rel="stylesheet" href="cake.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <div class="logo">
+            🍰 Sweet Crumbs
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.php">Products</a>
+            <a href="offers.html">Offers</a>
+            <a href="custom-cakes.html">Custom Cakes</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Freshly Baked With Love ❤️</h1>
+
+            <p>
+                Delicious cakes, pastries and bakery items
+                made fresh every day.
+            </p>
+
+            <button onclick="shopNow()">
+                Shop Now
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+            🎂
+        </div>
+
+    </section>
+
+
+    <!-- Search -->
+
+    <section class="search">
+
+        <h2>Find Your Favourite Treat</h2>
+        <form action="cake.php" method="POST">
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search cakes, pastries..."
+            onkeyup="searchProduct()"
+        >
+
+    </section>
+
+
+    <!-- Featured Products -->
+
+    <section class="products">
+
+        <h2>Our Popular Products</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🎂
+                </div>
+
+                <h3>Chocolate Cake</h3>
+
+                <p>Rich chocolate cake</p>
+
+                <h4>₹550</h4>
+
+                <button onclick="addToCart('Chocolate Cake')">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🧁
+                </div>
+
+                <h3>Vanilla Cupcake</h3>
+
+                <p>Soft and delicious cupcake</p>
+
+                <h4>₹80</h4>
+
+                <button onclick="addToCart('Vanilla Cupcake')">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🥐
+                </div>
+
+                <h3>Chocolate Croissant</h3>
+
+                <p>Fresh buttery croissant</p>
+
+                <h4>₹120</h4>
+
+                <button onclick="addToCart('Chocolate Croissant')">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🍪
+                </div>
+
+                <h3>Chocolate Cookies</h3>
+
+                <p>Crispy chocolate cookies</p>
+
+                <h4>₹150</h4>
+
+                <button onclick="addToCart('Chocolate Cookies')">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Offers -->
+
+    <section class="offer">
+
+        <h2>🎉 Special Offer 🎉</h2>
+
+        <p>
+            Get 20% OFF on orders above ₹1000!
+        </p>
+
+        <button onclick="showOffer()">
+            View Offers
+        </button>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+
+    <section class="why-us">
+
+        <h2>Why Choose Sweet Crumbs?</h2>
+
+        <div class="features">
+
+            <div>
+                <h3>🍰 Freshly Baked</h3>
+                <p>
+                    Our products are freshly prepared every day.
+                </p>
+            </div>
+
+            <div>
+                <h3>🚚 Fast Delivery</h3>
+                <p>
+                    Get your favourite treats delivered quickly.
+                </p>
+            </div>
+
+            <div>
+                <h3>❤️ Made With Love</h3>
+                <p>
+                    Quality ingredients and delicious recipes.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Sweet Crumbs Bakery
+        </p>
+
+        <p>
+            Freshness in every bite!
+        </p>
+
+    </footer>
+
+
+    <script src="cake.js"></script>
+</form>
+</body>
+</html>
