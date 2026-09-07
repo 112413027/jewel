@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Shop</title>
+    <link rel="stylesheet" href="bakery12.css">
+
+</head>
+<body>
+
+    <div class="product-container">
+    <div class="product-card" data-id="bakery_001" data-name="Piece Cake" data-price="80.00">
+        <img src="piececake.jpg" alt="Piece Cake" class="product-img">
+        <h2 class="product-title">Piece Cake</h2>
+        <p class="product-price">₹80.00</p>
+        
+        <!-- Validation & Input Controls -->
+        <div class="order-controls">
+            <label for="qty-001">Quantity (Max 10):</label>
+            <input type="number" id="qty-001" class="item-qty" value="1" min="1" max="10">
+            <span class="error-msg" id="error-001"></span>
+        </div>
+
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+
+<!-- Product Card -->
+ <div class="product-card" data-id="bakery_002" data-name="Chocolate Fudge Cake" data-price="500.00">
+        <img src="fudge cake.jpg" alt="Chocolate Fudge Cake" class="product-img">
+        <h2 class="product-title">Chocolate Fudge Cake</h2>
+        <p class="product-price">₹500.00</p>
+        
+        <!-- Validation & Input Controls -->
+        <div class="order-controls">
+            <label for="qty-002">Quantity (Max 10):</label>
+            <input type="number" id="qty-002" class="item-qty" value="1" min="1" max="10">
+            <span class="error-msg" id="error-002"></span>
+        </div>
+
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-container">
+  <div class="product-card" data-id="bakery_003" data-name="Piece Cake" data-price="600.00">
+        <img src="fruitcake.jpg" alt="Piece Cake" class="product-img">
+        <h2 class="product-title">Chocolate Fudge Cake</h2>
+        <p class="product-price">₹600.00</p>
+        
+        <!-- Validation & Input Controls -->
+        <div class="order-controls">
+            <label for="qty-003">Quantity (Max 10):</label>
+            <input type="number" id="qty-003" class="item-qty" value="1" min="1" max="10">
+            <span class="error-msg" id="error-003"></span>
+        </div>
+
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+<!-- Product Card -->
+   <div class="product-card" data-id="bakery_004" data-name="Rainbow Pastel Cake" data-price="450.00">
+        <img src=" rainbowcake.jpg" alt="Rainbow Pastel Cake" class="product-img">
+        <h2 class="product-title">Rainbow Pastel Cake</h2>
+        <p class="product-price">₹450.00</p>
+        
+        <!-- Validation & Input Controls -->
+        <div class="order-controls">
+            <label for="qty-004">Quantity (Max 10):</label>
+            <input type="number" id="qty-004" class="item-qty" value="1" min="1" max="10">
+            <span class="error-msg" id="error-004"></span>
+        </div>
+
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div> 
+</div>
+
+<div class="product-container">
+<div class="product-card" data-id="bakery_005" data-name="Rainbow Pastel Cake" data-price="650.00">
+        <img src=" birthdaycake.jpg" alt="Rainbow Pastel Cake" class="product-img">
+        <h2 class="product-title">Rainbow Pastel Cake</h2>
+        <p class="product-price">₹650.00</p>
+        
+        <!-- Validation & Input Controls -->
+        <div class="order-controls">
+            <label for="qty-005">Quantity (Max 10):</label>
+            <input type="number" id="qty-005" class="item-qty" value="1" min="1" max="10">
+            <span class="error-msg" id="error-005"></span>
+        </div>
+
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+<!-- Product Card -->
+<div class="product-card" data-id="bakery_006" data-name="Doll Cake" data-price="750.00">
+        <img src=" dollcake.jpg" alt="Doll Cake" class="product-img">
+        <h2 class="product-title">Doll Cake</h2>
+        <p class="product-price">₹750.00</p>
+        
+        <!-- Validation & Input Controls -->
+        <div class="order-controls">
+            <label for="qty-006">Quantity (Max 10):</label>
+            <input type="number" id="qty-006" class="item-qty" value="1" min="1" max="10">
+            <span class="error-msg" id="error-006"></span>
+        </div>
+
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div><br>
+
+
+    <!-- Mini Cart Preview -->
+  <center> <div class="cart-preview">
+        <h3>Your Shopping Bag (<span id="cart-count">0</span> items)</h3>
+        <ul id="cart-items-list"></ul>
+        <button id="clear-cart">Clear Cart</button>
+    </div></center>
+
+    <script src="bakery.js"></script>
+</body>
+</html>
