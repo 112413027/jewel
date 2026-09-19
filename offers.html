@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers | Sweet Crumbs Bakery</title>
+    <link rel="stylesheet" href="offers.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Sweet Crumbs</div>
+
+        <ul class="nav-links">
+            <a href="register1.html">Home</a>
+            <a href="s.html">Cakes</a>
+            <a href="snacks1.html">Snacks</a>
+            <a href="pastries1.html">Sweets</a>
+            <a href="offers.html" class="active">Offers</a>
+        </ul>
+    </nav>
+
+
+    <!-- Offers Header -->
+    <header class="offers-header">
+        <span>✨ SPECIAL DEALS ✨</span>
+        <h1>Today's Offers</h1>
+        <p>Delicious treats at special prices!</p>
+    </header>
+
+
+    <!-- Offered Products -->
+    <main class="offers-container">
+
+        <div class="product-card">
+
+            <div class="offer-badge">20% OFF</div>
+
+            <img src="fruitcake.jpg"
+                 alt="Fruit Cake">
+
+            <div class="product-info">
+                <h2>Fruit Cake</h2>
+
+                <p class="description">
+                    Fresh fruit cake baked with fresh fruits and
+                 nuts.</p>
+
+                <div class="price">
+                    <span class="old-price">₹900</span>
+                    <span class="new-price">₹720</span>
+                </div>
+
+                <button onclick="addToCart('Fruit Cake', 720)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="offer-badge">15% OFF</div>
+
+            <img src="redvelvet.jpg"
+                 alt="Red Velvet Cake">
+
+            <div class="product-info">
+                <h2>Red Velvet Cake</h2>
+
+                <p class="description">
+                    Soft red velvet sponge with delicious cream cheese
+                    frosting.
+                </p>
+
+                <div class="price">
+                    <span class="old-price">₹800</span>
+                    <span class="new-price">₹680</span>
+                </div>
+
+                <button onclick="addToCart('Red Velvet Cake', 680)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="offer-badge">BUY 6 GET 1</div>
+
+            <img src="cupcakes.jpg"
+                 alt="Cupcakes">
+
+            <div class="product-info">
+                <h2>Assorted Cupcakes</h2>
+
+                <p class="description">
+                    A delicious box of assorted vanilla, chocolate and
+                    strawberry cupcakes.
+                </p>
+
+                <div class="price">
+                    <span class="old-price">₹450</span>
+                    <span class="new-price">₹350</span>
+                </div>
+
+                <button onclick="addToCart('Assorted Cupcakes', 350)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+
+            <div class="offer-badge">25% OFF</div>
+
+            <img src="cookies.jpg"
+                 alt="Chocolate Chip Cookies">
+
+            <div class="product-info">
+                <h2>Chocolate Chip Cookies</h2>
+
+                <p class="description">
+                    Freshly baked cookies packed with delicious chocolate
+                    chips.
+                </p>
+
+                <div class="price">
+                    <span class="old-price">₹400</span>
+                    <span class="new-price">₹300</span>
+                </div>
+
+                <button onclick="addToCart('Chocolate Chip Cookies', 300)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+<div class="product-card">
+
+    <div class="offer-badge">BUY 2 GET 1 FREE</div>
+
+    <img src="samosa.jpg"
+         alt="Samosa">
+
+    <div class="product-info">
+
+        <h2>Samosa</h2>
+
+        <p class="description">
+            Crispy, samosa filled with delicious spiced potatoes and
+            onion filling.
+        </p>
+
+        <div class="price">
+            <span class="old-price">₹100</span>
+            <span class="new-price">₹60</span>
+        </div>
+
+        <button onclick="addToCart('Samosa - Buy 2 Get 1 Free', 60)">
+            Add to Cart
+        </button>
+
+    </div>
+</div>
+
+<div class="product-card">
+
+    <div class="offer-badge">Buy 1 KG Get 0.5 KG FREE</div>
+
+    <img src="palkova.jpg"
+         alt="Assorted Indian Sweets">
+
+    <div class="product-info">
+
+        <h2>Milk Sweets</h2>
+
+        <p class="description">
+            A delicious selection of freshly prepared traditional
+            sweets, perfect for celebrations and special occasions.
+        </p>
+
+        <div class="price">
+            <span class="old-price">₹700</span>
+            <span class="new-price">₹500</span>
+        </div>
+
+        <button onclick="addToCart('Assorted Sweets - 1 KG + 0.5 KG Free', 600)">
+            Add to Cart
+        </button>
+
+    </div>
+</div>
+
+<div class="product-card">
+
+    <div class="offer-badge">2 KG + 0.5 KG FREE</div>
+
+    <img src="jalebi.jpg"
+         alt="Assorted Indian Sweets">
+
+    <div class="product-info">
+
+        <h2>Jalebi</h2>
+
+        <p class="description">
+            A delicious selection of freshly prepared traditional
+            sweets, perfect for celebrations and special occasions.
+        </p>
+
+        <div class="price">
+            <span class="old-price">₹400</span>
+            <span class="new-price">₹350</span>
+        </div>
+
+        <button onclick="addToCart('Assorted Sweets - 2 KG + 0.5 KG Free', 350)">
+            Add to Cart
+        </button>
+
+    </div>
+</div>
+
+<div class="product-card">
+
+    <div class="offer-badge">1 KG + 1.5 KG FREE</div>
+
+    <img src="macaron.jpg"
+         alt="Assorted Indian Sweets">
+
+    <div class="product-info">
+
+        <h2>Pastries</h2>
+
+        <p class="description">
+            A delicious and freshly prepared pastries,
+            perfect for celebrations and special occasions.
+        </p>
+
+        <div class="price">
+            <span class="old-price">₹400</span>
+            <span class="new-price">₹300</span>
+        </div>
+
+        <button onclick="addToCart('Assorted Sweets - 1 KG + 0.5 KG Free', 300)">
+            Add to Cart
+        </button>
+
+    </div>
+</div>
+
+
+    </main>
+
+
+    <!-- Cart Message -->
+    <div id="cart-message"></div>
+
+
+    <footer>
+        <p>© 2026 Sweet Crumbs Bakery. All rights reserved.</p>
+    </footer>
+
+
+    <script src="offers.js"></script>
+
+</body>
+</html>
