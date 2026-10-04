@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sweets Crumbs - Cake Website</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #4a2c2a;
+}
+
+/* ================= COMMON ================= */
+
+header {
+    background-color: #f7b6c2;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #d94f70;
+    text-align: center;
+}
+
+h3 {
+    color: #b23a48;
+    font-size: 24px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ================= PAGE CONTROL ================= */
+
+#page2,
+#page3 {
+    display: none;
+}
+
+/* ================= CAKES ================= */
+
+.cakes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cake-card {
+    background-color: #fff0f3;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.cake-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+ul {
+    font-size: 17px;
+    line-height: 2;
+}
+
+/* ================= NAVIGATION ================= */
+
+.navigation {
+    text-align: center;
+    margin: 30px;
+}
+
+.navigation button {
+    background-color: #d94f70;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navigation button:hover {
+    background-color: #b23a48;
+}
+
+/* ================= ORDER PAGE ================= */
+
+.order-box {
+    width: 450px;
+    max-width: 90%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+}
+
+.order-box h1 {
+    text-align: center;
+    color: #d63384;
+}
+
+.order-box h2 {
+    text-align: center;
+    color: #b23a48;
+}
+
+.order-box label {
+    font-weight: bold;
+}
+
+.order-box input,
+.order-box select,
+.order-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    box-sizing: border-box;
+}
+
+.order-box input[type="radio"] {
+    width: auto;
+}
+
+.order-box input[type="submit"] {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-box input[type="submit"]:hover {
+    background-color: #ad1457;
+}
+
+/* ================= REVIEW PAGE ================= */
+
+.review-body {
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    color: #4a2630;
+}
+
+.review-header {
+    background: #8b3a62;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.review-header h1 {
+    margin: 0;
+    font-size: 35px;
+}
+
+.review-header p {
+    margin-top: 8px;
+}
+
+.review-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.review-box {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
+
+.review-box h2 {
+    text-align: center;
+    color: #8b3a62;
+}
+
+.review-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.review-box input[type="text"],
+.review-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 2px solid #e8b6c7;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.review-box textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* STAR RATING */
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 35px;
+    color: #ccc;
+    cursor: pointer;
+    margin: 0 3px;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffc107;
+}
+
+.review-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #8b3a62;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.review-button:hover {
+    background: #6d284b;
+    transform: scale(1.02);
+}
+
+#message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* REVIEW CARDS */
+
+.reviews-title {
+    text-align: center;
+    color: #8b3a62;
+    margin-bottom: 20px;
+}
+
+.review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.review-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-7px);
+}
+
+.review-card h3 {
+    margin-top: 0;
+    color: #8b3a62;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 22px;
+}
+
+.review-card p {
+    line-height: 1.5;
+}
+
+/* CAKE ANIMATION */
+
+.cake-animation {
+    font-size: 45px;
+    text-align: center;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #f7b6c2;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.review-footer {
+    margin-top: 40px;
+    background: #8b3a62;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- PAGE 1 : HOME / CAKES -->
+<!-- ================================================= -->
+
+<div id="page1">
+
+<header>
+    <h1>🍰 Sweets Crumbs 🍰</h1>
+    <p>Freshly Baked Happiness</p>
+</header>
+
+<div class="container">
+
+<section>
+    <h2>🍰 Welcome to Sweets Crumbs</h2>
+
+    <p>
+        Welcome to <strong>Sweets Crumbs</strong>, where every cake
+        is baked with love, creativity, and the finest ingredients.
+        We believe that every celebration deserves something sweet,
+        beautiful, and memorable.
+    </p>
+</section>
+
+<section>
+
+<h2>🎂 Our Cakes</h2>
+
+<p>
+    At Sweets Crumbs, we offer a delicious collection of cakes
+    for every taste and occasion. From rich chocolate cakes to
+    refreshing fruit cakes, our cakes are soft, creamy, and
+    freshly baked.
+</p>
+
+<div class="cakes">
+
+<div class="cake-card">
+    <h3>🍫 Chocolate Cake</h3>
+    <p>
+        A rich and delicious chocolate cake layered with
+        smooth chocolate cream.
+    </p>
+</div>
+
+<div class="cake-card">
+    <h3>🍓 Strawberry Cake</h3>
+    <p>
+        A soft and flavorful cake filled with strawberry
+        cream and delicious strawberry pieces.
+    </p>
+</div>
+
+<div class="cake-card">
+    <h3>🍦 Vanilla Cake</h3>
+    <p>
+        A classic vanilla cake with soft layers and creamy
+        frosting.
+    </p>
+</div>
+
+<div class="cake-card">
+    <h3>❤️ Red Velvet Cake</h3>
+    <p>
+        A soft red velvet cake with smooth cream frosting
+        and a beautiful finish.
+    </p>
+</div>
+
+<div class="cake-card">
+    <h3>🍍 Pineapple Cake</h3>
+    <p>
+        A light and refreshing cake made with delicious
+        pineapple flavor.
+    </p>
+</div>
+
+<div class="cake-card">
+    <h3>🥭 Mango Cake</h3>
+    <p>
+        A sweet and creamy mango-flavored cake made with
+        delicious mango filling.
+    </p>
+</div>
+
+</div>
+</section>
+
+<div class="navigation">
+
+    <button onclick="showPage2()">
+        Next Page ➡️
+    </button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 2 : ORDER FORM -->
+<!-- ================================================= -->
+
+<div id="page2">
+
+<header>
+    <h1>🎂 Sweets Crumbs - Cake Order 🎂</h1>
+    <p>Order Your Favourite Cake</p>
+</header>
+
+<div class="order-box">
+
+<h1>🍰 Sweets Crumbs 🍰</h1>
+
+<h2>🎂 Cake Order Form</h2>
+
+<form action="order.php" method="POST">
+
+<label for="name">Name:</label>
+
+<input
+    type="text"
+    id="name"
+    name="name"
+    minlength="10"
+    maxlength="10"
+    pattern="[A-Za-z ]{10}"
+    title="Name must contain exactly 10 characters. Numbers are not allowed."
+    placeholder="Enter exactly 10 characters"
+    required
+>
+
+<label for="phone">Phone Number:</label>
+
+<input
+    type="tel"
+    id="phone"
+    name="phone"
+    pattern="[0-9]{10}"
+    inputmode="numeric"
+    maxlength="10"
+    title="Phone number must contain exactly 10 digits."
+    required
+>
+
+<label for="email">Email:</label>
+
+<input
+    type="email"
+    id="email"
+    name="email"
+    title="Please enter a valid email address."
+    required
+>
+
+<label for="cake_id">Cake ID:</label>
+
+<select id="cake_id" name="cake_id" required>
+
+<option value="">-- Select Cake ID --</option>
+
+<option value="C001">C001 - Chocolate Cake</option>
+
+<option value="C002">C002 - Strawberry Cake</option>
+
+<option value="C003">C003 - Vanilla Cake</option>
+
+<option value="C004">C004 - Red Velvet Cake</option>
+
+<option value="C005">C005 - Pineapple Cake</option>
+
+<option value="C006">C006 - Mango Cake</option>
+
+</select>
+
+<label for="quantity">Quantity:</label>
+
+<input
+    type="number"
+    id="quantity"
+    name="quantity"
+    min="1"
+    max="20"
+    required
+>
+
+<label for="delivery_date">Delivery Date:</label>
+
+<input
+    type="date"
+    id="delivery_date"
+    name="delivery_date"
+    required
+>
+
+<label>Order Type:</label>
+
+<br>
+
+<input
+    type="radio"
+    id="delivery"
+    name="order_type"
+    value="Delivery"
+    required
+>
+
+<label for="delivery">Delivery</label>
+
+<input
+    type="radio"
+    id="pickup"
+    name="order_type"
+    value="Pickup"
+>
+
+<label for="pickup">Pickup</label>
+
+<br><br>
+
+<label for="message">
+    Special Message on Cake:
+</label>
+
+<textarea
+    id="message"
+    name="message"
+    maxlength="100"
+    placeholder="Enter your special message"
+></textarea>
+
+<label for="address">Address:</label>
+
+<textarea
+    id="address"
+    name="address"
+    minlength="10"
+    maxlength="200"
+    required
+></textarea>
+
+<input
+    type="submit"
+    value="🍰 Place Order"
+>
+
+</form>
+
+</div>
+
+<div class="navigation">
+
+<button onclick="showPage1()">
+    ⬅️ Previous Page
+</button>
+
+<button onclick="showPage3()">
+    Next Page ➡️
+</button>
+
+</div>
+
+<footer>
+
+<h2>🍰 Sweets Crumbs</h2>
+
+<p>
+    Fresh Cakes • Sweet Memories • Happy Moments
+</p>
+
+<p>
+    Thank you for choosing Sweets Crumbs! ❤️
+</p>
+
+</footer>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 3 : CUSTOMER REVIEW -->
+<!-- ================================================= -->
+
+<div id="page3" class="review-body">
+
+<header class="review-header">
+
+<div class="cake-animation">🎂</div>
+
+<h1>Sweets Crumbs</h1>
+
+<p>Share Your Sweet Experience!</p>
+
+</header>
+
+<div class="review-container">
+
+<!-- REVIEW FORM -->
+
+<div class="review-box">
+
+<h2>⭐ Write a Review ⭐</h2>
+
+<form id="reviewForm">
+
+<label for="reviewName">
+    Your Name
+</label>
+
+<input
+    type="text"
+    id="reviewName"
+    placeholder="Enter your name"
+    pattern="[A-Za-z ]{3,30}"
+    title="Name should contain only letters and spaces"
+    required
+>
+
+<label>Your Rating</label>
+
+<div class="stars">
+
+<input
+    type="radio"
+    id="star5"
+    name="rating"
+    value="5"
+>
+
+<label for="star5">★</label>
+
+<input
+    type="radio"
+    id="star4"
+    name="rating"
+    value="4"
+>
+
+<label for="star4">★</label>
+
+<input
+    type="radio"
+    id="star3"
+    name="rating"
+    value="3"
+>
+
+<label for="star3">★</label>
+
+<input
+    type="radio"
+    id="star2"
+    name="rating"
+    value="2"
+>
+
+<label for="star2">★</label>
+
+<input
+    type="radio"
+    id="star1"
+    name="rating"
+    value="1"
+>
+
+<label for="star1">★</label>
+
+</div>
+
+<label for="review">
+    Your Review
+</label>
+
+<textarea
+    id="review"
+    placeholder="Tell us about your cake..."
+    minlength="5"
+    maxlength="200"
+    required
+></textarea>
+
+<button
+    type="submit"
+    class="review-button"
+>
+    🍰 Submit Review
+</button>
+
+<p id="message"></p>
+
+</form>
+
+</div>
+
+
+<!-- CUSTOMER REVIEWS -->
+
+<h2 class="reviews-title">
+    💬 What Our Customers Say
+</h2>
+
+<div class="review-list" id="reviewList">
+
+<div class="review-card">
+
+<h3>Priya</h3>
+
+<div class="rating">
+    ★★★★★
+</div>
+
+<p>
+    The chocolate cake was delicious and fresh.
+    The decoration was beautiful!
+</p>
+
+</div>
+
+
+<div class="review-card">
+
+<h3>Arun</h3>
+
+<div class="rating">
+    ★★★★☆
+</div>
+
+<p>
+    Amazing taste and excellent service.
+    I really enjoyed the cake.
+</p>
+
+</div>
+
+
+<div class="review-card">
+
+<h3>Divya</h3>
+
+<div class="rating">
+    ★★★★★
+</div>
+
+<p>
+    Sweets Crumbs made my birthday special.
+    The cake looked beautiful and tasted great!
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 3 NAVIGATION -->
+
+<div class="navigation">
+
+<button onclick="showPage2()">
+    ⬅️ Previous Page
+</button>
+
+<button onclick="showPage1()">
+    🏠 Home Page
+</button>
+
+</div>
+
+
+<footer class="review-footer">
+
+<p>
+    © 2026 Sweets Crumbs | Freshly Baked Happiness 🎂
+</p>
+
+</footer>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================================= -->
+
+<script>
+
+/* ================= PAGE NAVIGATION ================= */
+
+function showPage1() {
+
+    document.getElementById("page1").style.display = "block";
+
+    document.getElementById("page2").style.display = "none";
+
+    document.getElementById("page3").style.display = "none";
+
+    window.scrollTo(0, 0);
+}
+
+
+function showPage2() {
+
+    document.getElementById("page1").style.display = "none";
+
+    document.getElementById("page2").style.display = "block";
+
+    document.getElementById("page3").style.display = "none";
+
+    window.scrollTo(0, 0);
+}
+
+
+function showPage3() {
+
+    document.getElementById("page1").style.display = "none";
+
+    document.getElementById("page2").style.display = "none";
+
+    document.getElementById("page3").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* ================= ORDER FORM VALIDATION ================= */
+
+/* Name - only letters and spaces */
+
+document.getElementById("name").addEventListener(
+    "input",
+    function() {
+
+        this.value = this.value.replace(
+            /[^A-Za-z ]/g,
+            ""
+        );
+
+    }
+);
+
+
+/* Phone - only numbers */
+
+document.getElementById("phone").addEventListener(
+    "input",
+    function() {
+
+        this.value = this.value.replace(
+            /[^0-9]/g,
+            ""
+        );
+
+    }
+);
+
+
+/* ================= REVIEW FORM ================= */
+
+document.getElementById("reviewForm").addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        let name =
+            document.getElementById("reviewName").value.trim();
+
+        let review =
+            document.getElementById("review").value.trim();
+
+        let rating =
+            document.querySelector(
+                'input[name="rating"]:checked'
+            );
+
+        let message =
+            document.getElementById("message");
+
+
+        /* NAME VALIDATION */
+
+        if (!/^[A-Za-z ]{3,30}$/.test(name)) {
+
+            message.style.color = "red";
+
+            message.textContent =
+                "Please enter a valid name.";
+
+            return;
+        }
+
+
+        /* RATING VALIDATION */
+
+        if (!rating) {
+
+            message.style.color = "red";
+
+            message.textContent =
+                "Please select a star rating.";
+
+            return;
+        }
+
+
+        /* REVIEW VALIDATION */
+
+        if (review.length < 5) {
+
+            message.style.color = "red";
+
+            message.textContent =
+                "Review must contain at least 5 characters.";
+
+            return;
+        }
+
+
+        /* CREATE REVIEW CARD */
+
+        let card =
+            document.createElement("div");
+
+        card.className = "review-card";
+
+
+        let stars =
+            "★".repeat(Number(rating.value)) +
+            "☆".repeat(
+                5 - Number(rating.value)
+            );
+
+
+        card.innerHTML = `
+            <h3>${name}</h3>
+
+            <div class="rating">
+                ${stars}
+            </div>
+
+            <p>
+                ${review}
+            </p>
+        `;
+
+
+        document
+            .getElementById("reviewList")
+            .prepend(card);
+
+
+        /* SUCCESS MESSAGE */
+
+        message.style.color = "green";
+
+        message.textContent =
+            "🎉 Thank you! Your review has been submitted.";
+
+
+        /* CLEAR FORM */
+
+        document
+            .getElementById("reviewForm")
+            .reset();
+
+    }
+);
+
+</script>
+
+</body>
+</html>
